@@ -1,7 +1,7 @@
 function save_options() {
   const hostEntries = document.getElementsByClassName('host-entry');
   const hostLimits = [];
-  for (let entry of hostEntries) {
+  for (const entry of hostEntries) {
     const inputs = entry.getElementsByTagName('input');
     const host = inputs[0].value;
     const limit = Number(inputs[1].value);
@@ -29,8 +29,8 @@ function restore_options() {
   chrome.storage.sync.get({
     hostLimits: []
   }, function({ hostLimits }) {
-    for (let hostLimit of hostLimits) {
-      let [hostInput, limitInput] = addHostRow();
+    for (const hostLimit of hostLimits) {
+      const [hostInput, limitInput] = addHostRow();
       hostInput.value = hostLimit.host;
       limitInput.value = hostLimit.limit;
     }

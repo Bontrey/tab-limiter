@@ -1,9 +1,9 @@
 {
   "manifest_version": 2,
 
-  "name": "Tab Limiter",
-  "description": "",
-  "version": "1.0",
+  "name": "Host-based Tab Limiter",
+  "description": "Keeps the number of tabs for individual, specified hosts no greater than a limit",
+  "version": "0.0.0.1",
 
   "background": {
     "persistent": false,
@@ -14,8 +14,8 @@
     "chrome_style": true
   },
   "permissions": [
-    "activeTab",
     "storage",
+    "tabs",
     "webNavigation"
   ]
 }
